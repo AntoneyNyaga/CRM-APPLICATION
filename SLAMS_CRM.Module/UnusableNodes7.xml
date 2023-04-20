@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Quote_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs" Index="2" RelativeSize="63.61355081555834">
+            <LayoutGroup Id="ApplicationUsers" RelativeSize="100">
+              <LayoutItem Id="ApplicationUsers" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Products" RelativeSize="100">
+              <LayoutItem Id="Products" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Quote">
+              <LayoutGroup Id="Quote_col2">
+                <LayoutItem Id="DateCreated" ViewItem="DateCreated" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Lead_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item2">
+              <LayoutGroup Id="Auto808b1219-5dd1-4364-907b-a4c7e4da6c47">
+                <LayoutItem Id="Quote" ViewItem="Quote" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

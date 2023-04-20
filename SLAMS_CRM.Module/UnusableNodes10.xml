@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Dashboard_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MyActivityStream.Description" SortIndex="0" SortOrder="Ascending" Width="322" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Lead_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item2">
+              <LayoutGroup Id="Auto808b1219-5dd1-4364-907b-a4c7e4da6c47">
+                <LayoutItem Id="Quote" ViewItem="Quote" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

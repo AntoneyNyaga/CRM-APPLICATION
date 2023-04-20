@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="SLAMS CRM" ImageName="BO_Project">
+        <Items Id="Items">
+          <Item Id="Account_ListView" ImageName="Business_Bank" />
+          <Item Id="Contact_ListView" ImageName="BO_Person" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views Id="Views">
+    <DetailView Id="Lead_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item2">
+              <LayoutGroup Id="Auto808b1219-5dd1-4364-907b-a4c7e4da6c47">
+                <LayoutItem Id="Quote" ViewItem="Quote" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

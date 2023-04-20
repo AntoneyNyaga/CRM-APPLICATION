@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Lead_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutItem Id="Notes" ViewItem="Notes" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item2">
+              <LayoutGroup Id="Auto9e65d28b-c192-4776-a733-c94a67e26e03">
+                <LayoutItem Id="Address" ViewItem="Address" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Lead">
+              <LayoutGroup Id="Lead_col2">
+                <LayoutItem Id="PhoneNumber" ViewItem="PhoneNumber" />
+              </LayoutGroup>
+              <LayoutGroup Id="Lead_col1">
+                <LayoutItem Id="EmailAddress" ViewItem="EmailAddress" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Lead_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="EmailAddress" Index="3" />
+        <ColumnInfo Id="PhoneNumber" Index="4" />
+        <ColumnInfo Id="Address" Index="5" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

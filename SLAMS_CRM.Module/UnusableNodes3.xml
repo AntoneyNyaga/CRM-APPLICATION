@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="Contact_Addresses_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FullAddress" SortOrder="Ascending" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
