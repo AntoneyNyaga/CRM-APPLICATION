@@ -3,7 +3,7 @@
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
   </BOModel>
-  <NavigationItems StartupNavigationItem="Dashboard">
+  <NavigationItems NavigationStyle="Accordion" StartupNavigationItem="Dashboard">
     <Items>
       <Item Id="Dashboard" ViewId="Dashboard" Index="0" IsNewNode="True" />
       <Item Id="Inbox" ImageName="Actions_EnvelopeClose" Index="1" />
@@ -33,7 +33,7 @@
     <SchemaModule Name="CloneObjectModule" Version="22.2.4.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="22.2.4.0" IsNewNode="True" />
   </SchemaModules>
-  <Views>
+  <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor">
     <ListView Id="Account_ListView" ShowAutoFilterRow="True" AutoExpandAllGroups="True" />
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
     <ListView Id="Communication_ListView" ShowAutoFilterRow="True" />
