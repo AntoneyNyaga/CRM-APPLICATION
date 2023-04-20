@@ -1,6 +1,6 @@
-# SLAMS CRM
+# CRM APP
 
-SLAMS CRM is a customer relationship management system built with DevExpress XAF framework. This application helps businesses manage their sales, customer interactions, and customer data in a single, centralized system.
+CRM APP is a customer relationship management system built with DevExpress XAF framework. This application helps businesses manage their sales, customer interactions, and customer data in a single, centralized system.
 ## Features
 
 - Track and manage customer data, including contact information, interactions, and transactions
