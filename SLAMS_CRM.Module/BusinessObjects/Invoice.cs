@@ -35,7 +35,7 @@ namespace SLAMS_CRM.Module.BusinessObjects
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
         public string InvoiceNumber { get; set; }
-        public DateTime InvoiceDate { get; set; }=DateTime.Now;
+        public DateTime InvoiceDate { get; set; }
         public Account BilledTO{ get; set; }
         public DateTime DueDate { get; set; }
         public string Description { get; set; }
