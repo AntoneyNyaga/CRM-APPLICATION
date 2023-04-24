@@ -36,13 +36,13 @@ namespace SLAMS_CRM.Module.BusinessObjects
         }
         public string InvoiceNumber { get; set; }
         public DateTime InvoiceDate { get; set; }=DateTime.Now;
-        public Account BilledTo{ get; set; }
+        public Account BilledTO{ get; set; }
         public DateTime DueDate { get; set; }
-        public string Terms { get; set; }
-        public string Status { get; set; }
         public string Description { get; set; }
+        public decimal Amount { get; set; }
+        public decimal Tax { get; set; }
+        public decimal Total { get; set; }
+        public string Status { get; set; }  
         public string Notes { get; set; }
-        public string InvoiceTo { get; set; }
-
     }
 }

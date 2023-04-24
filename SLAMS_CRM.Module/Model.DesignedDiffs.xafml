@@ -5,7 +5,11 @@
   </BOModel>
   <NavigationItems NavigationStyle="Accordion" StartupNavigationItem="Dashboard">
     <Items>
-      <Item Id="Dashboard" ViewId="Dashboard" Index="0" IsNewNode="True" />
+      <Item Id="Dashboard" ViewId="Dashboard" Index="0" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Profile" IsNewNode="True" />
+        </Items>
+      </Item>
       <Item Id="Inbox" ImageName="Actions_EnvelopeClose" Index="1" />
       <Item Id="Clients and Leads" ImageName="BO_Customer" Index="2">
         <Items>
@@ -33,7 +37,7 @@
     <SchemaModule Name="CloneObjectModule" Version="22.2.4.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="22.2.4.0" IsNewNode="True" />
   </SchemaModules>
-  <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor">
+  <Views>
     <ListView Id="Account_ListView" ShowAutoFilterRow="True" AutoExpandAllGroups="True" />
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
     <ListView Id="Communication_ListView" ShowAutoFilterRow="True" />
