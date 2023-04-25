@@ -28,6 +28,12 @@
         </Items>
       </Item>
       <Item Id="Reports" ImageName="Action_Report_Object_Inplace_Preview" Index="5" />
+      <Item Id="Order Management" ImageName="BO_Order">
+        <Items>
+          <Item Id="Invoice_ListView" ImageName="BO_Invoice" />
+          <Item Id="SalesOrders_ListView" ImageName="Shopping_Sales" />
+        </Items>
+      </Item>
     </Items>
   </NavigationItems>
   <Options>

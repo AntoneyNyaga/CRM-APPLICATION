@@ -15,17 +15,17 @@ using System.Text;
 namespace SLAMS_CRM.Module.BusinessObjects
 {
     [DefaultClassOptions]
-    [NavigationItem("Accounting")]
-    //[ImageName("BO_Contact")]
+    [NavigationItem("Order Management")]
+    [ImageName("Payment")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class Invoice : BaseObject
+    public class Payments : BaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
         // Use CodeRush to create XPO classes and properties with a few keystrokes.
         // https://docs.devexpress.com/CodeRushForRoslyn/118557
-        public Invoice(Session session)
+        public Payments(Session session)
             : base(session)
         {
         }
@@ -34,15 +34,19 @@ namespace SLAMS_CRM.Module.BusinessObjects
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
-        public string InvoiceNumber { get; set; }
-        public DateTime InvoiceDate { get; set; }
-        public Account BilledTO{ get; set; }
-        public DateTime DueDate { get; set; }
-        public string Description { get; set; }
-        public decimal Amount { get; set; }
-        public decimal Tax { get; set; }
-        public decimal Total { get; set; }
-        public string Status { get; set; }  
-        public string Notes { get; set; }
+        //private string _PersistentProperty;
+        //[XafDisplayName("My display name"), ToolTip("My hint message")]
+        //[ModelDefault("EditMask", "(000)-00"), Index(0), VisibleInListView(false)]
+        //[Persistent("DatabaseColumnName"), RuleRequiredField(DefaultContexts.Save)]
+        //public string PersistentProperty {
+        //    get { return _PersistentProperty; }
+        //    set { SetPropertyValue(nameof(PersistentProperty), ref _PersistentProperty, value); }
+        //}
+
+        //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
+        //public void ActionMethod() {
+        //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
+        //    this.PersistentProperty = "Paid";
+        //}
     }
 }
