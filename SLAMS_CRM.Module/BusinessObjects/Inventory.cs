@@ -15,17 +15,17 @@ using System.Text;
 namespace SLAMS_CRM.Module.BusinessObjects
 {
     [DefaultClassOptions]
-    [NavigationItem("Order Management")]
-    [ImageName("BO_Invoice")]
+    [NavigationItem("Products and Services")]
+    [ImageName("ProductSpecificationsSummary")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class PurchaseOrders : BaseObject
+    public class Inventory : BaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
         // Use CodeRush to create XPO classes and properties with a few keystrokes.
         // https://docs.devexpress.com/CodeRushForRoslyn/118557
-        public PurchaseOrders(Session session)
+        public Inventory(Session session)
             : base(session)
         {
         }
@@ -34,13 +34,12 @@ namespace SLAMS_CRM.Module.BusinessObjects
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
-        public string  PurchaseOrderNumber { get; set; } = "PO-SN" + DateTime.Now.ToString("yyyyMMddHHmmss");
-        public DateTime PurchaseOrderDate { get; set; } = DateTime.Now;
-        public string Item { get; set; }
-        public Account Vendor { get; set; }
-        public DateTime DueDate { get; set; } = DateTime.Now.AddDays(30);
-        public string Description { get; set; }
-        public decimal Amount { get; set; }
-        public decimal TotalAmount { get; set; }     
+        public string ProductName { get; set; }
+        public string ProductSerialNumber { get; set; }
+        public string ProductDescription { get; set; }
+        public decimal ProductCategory { get; set; }
+        public decimal ProductPurchsePrice { get; set; }      
+        public decimal ProductSalesPrice { get; set; }
+
     }
 }

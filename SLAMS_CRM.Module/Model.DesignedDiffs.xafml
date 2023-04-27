@@ -34,6 +34,7 @@
           <Item Id="SalesOrders_ListView" ImageName="Shopping_Sales" />
         </Items>
       </Item>
+      <Item Id="Products and Services" ImageName="BO_Order_Item" />
     </Items>
   </NavigationItems>
   <Options>
