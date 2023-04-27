@@ -15,8 +15,9 @@ using System.Text;
 namespace SLAMS_CRM.Module.BusinessObjects
 {
     [DefaultClassOptions]
-    [NavigationItem("Products and Services")]
-    [ImageName("ProductSpecificationsSummary")]
+    [NavigationItem("Order Management")]
+    [ImageName("BO_Invoice")]
+    
     public class SalesOrder : BaseObject
     {
         public SalesOrder(Session session) : base(session) { }
