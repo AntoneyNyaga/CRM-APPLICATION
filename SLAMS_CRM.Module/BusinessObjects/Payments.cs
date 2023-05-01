@@ -17,36 +17,54 @@ namespace SLAMS_CRM.Module.BusinessObjects
     [DefaultClassOptions]
     [NavigationItem("Order Management")]
     [ImageName("Payment")]
-    //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
-    //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
-    //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class Payments : BaseObject
-    { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        // Use CodeRush to create XPO classes and properties with a few keystrokes.
-        // https://docs.devexpress.com/CodeRushForRoslyn/118557
-        public Payments(Session session)
-            : base(session)
-        {
-        }
-        public override void AfterConstruction()
-        {
-            base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
-        }
-        //private string _PersistentProperty;
-        //[XafDisplayName("My display name"), ToolTip("My hint message")]
-        //[ModelDefault("EditMask", "(000)-00"), Index(0), VisibleInListView(false)]
-        //[Persistent("DatabaseColumnName"), RuleRequiredField(DefaultContexts.Save)]
-        //public string PersistentProperty {
-        //    get { return _PersistentProperty; }
-        //    set { SetPropertyValue(nameof(PersistentProperty), ref _PersistentProperty, value); }
-        //}
+    public class Payment : BaseObject
+{
+    public Payment(Session session) : base(session) { }
 
-        //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
-        //public void ActionMethod() {
-        //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
-        //    this.PersistentProperty = "Paid";
-        //}
+    private decimal amount;
+    public decimal Amount
+    {
+        get { return amount; }
+        set { SetPropertyValue(nameof(Amount), ref amount, value); }
+    }
+
+    private DateTime paymentDate;
+    public DateTime PaymentDate
+    {
+        get { return paymentDate; }
+        set { SetPropertyValue(nameof(PaymentDate), ref paymentDate, value); }
+    }
+
+    private Customer customer;
+    [Association("Customer-Payments")]
+    public Customer Customer
+    {
+        get { return customer; }
+        set { SetPropertyValue(nameof(Customer), ref customer, value); }
+    }
+
+    private PaymentType paymentType;
+    public PaymentType PaymentType
+    {
+        get { return paymentType; }
+        set { SetPropertyValue(nameof(PaymentType), ref paymentType, value); }
+    }
+
+    private string paymentReference;
+    public string PaymentReference
+    {
+        get { return paymentReference; }
+        set { SetPropertyValue(nameof(PaymentReference), ref paymentReference, value); }
     }
 }
+
+public enum PaymentType
+{
+    Cash,
+    CreditCard,
+    DebitCard,
+    BankTransfer,
+    Cheque,
+    Other
+}
+    }
