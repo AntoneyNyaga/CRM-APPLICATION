@@ -16,37 +16,97 @@ namespace SLAMS_CRM.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [NavigationItem("Order Management")]
-    [ImageName("Unlike")]
-    //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
-    //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
-    //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class CreditNotes : BaseObject
-    { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        // Use CodeRush to create XPO classes and properties with a few keystrokes.
-        // https://docs.devexpress.com/CodeRushForRoslyn/118557
-        public CreditNotes(Session session)
-            : base(session)
-        {
-        }
-        public override void AfterConstruction()
-        {
-            base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
-        }
-        //private string _PersistentProperty;
-        //[XafDisplayName("My display name"), ToolTip("My hint message")]
-        //[ModelDefault("EditMask", "(000)-00"), Index(0), VisibleInListView(false)]
-        //[Persistent("DatabaseColumnName"), RuleRequiredField(DefaultContexts.Save)]
-        //public string PersistentProperty {
-        //    get { return _PersistentProperty; }
-        //    set { SetPropertyValue(nameof(PersistentProperty), ref _PersistentProperty, value); }
-        //}
+    [ImageName("BO_Invoice")]
+    public class CreditNote : BaseObject
+    {
+        public CreditNote(Session session) : base(session) { }
 
-        //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
-        //public void ActionMethod() {
-        //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
-        //    this.PersistentProperty = "Paid";
-        //}
+        private string _creditNoteNumber;
+        [RuleRequiredField]
+        [Size(10)]
+        public string CreditNoteNumber
+        {
+            get { return _creditNoteNumber; }
+            set { SetPropertyValue(nameof(CreditNoteNumber), ref _creditNoteNumber, value); }
+        }
+
+        private DateTime _creditNoteDate;
+        [RuleRequiredField]
+        public DateTime CreditNoteDate
+        {
+            get { return _creditNoteDate; }
+            set { SetPropertyValue(nameof(CreditNoteDate), ref _creditNoteDate, value); }
+        }
+
+        private string _customerName;
+        [Size(50)]
+        public string CustomerName
+        {
+            get { return _customerName; }
+            set { SetPropertyValue(nameof(CustomerName), ref _customerName, value); }
+        }
+
+        private string _customerAddress;
+        [Size(100)]
+        public string CustomerAddress
+        {
+            get { return _customerAddress; }
+            set { SetPropertyValue(nameof(CustomerAddress), ref _customerAddress, value); }
+        }
+
+        private decimal _totalAmount;
+        [PersistentAlias(nameof(CalculateTotalAmount))]
+        public decimal TotalAmount
+        {
+            get { return _totalAmount; }
+        }
+        private decimal CalculateTotalAmount
+        {
+            get { return CalculateTotal(); }
+        }
+
+        [Association("CreditNote-CreditNoteDetails")]
+        public XPCollection<CreditNoteDetail> Details
+        {
+            get { return GetCollection<CreditNoteDetail>(nameof(Details)); }
+        }
+
+        private decimal CalculateTotal()
+        {
+            decimal total = 0m;
+            foreach (CreditNoteDetail detail in Details)
+            {
+                total += detail.Amount;
+            }
+            return total;
+        }
+    }
+
+    public class CreditNoteDetail : BaseObject
+    {
+        public CreditNoteDetail(Session session) : base(session) { }
+
+        private CreditNote _creditNote;
+        [Association("CreditNote-CreditNoteDetails")]
+        public CreditNote CreditNote
+        {
+            get { return _creditNote; }
+            set { SetPropertyValue(nameof(CreditNote), ref _creditNote, value); }
+        }
+
+        private string _description;
+        [Size(50)]
+        public string Description
+        {
+            get { return _description; }
+            set { SetPropertyValue(nameof(Description), ref _description, value); }
+        }
+
+        private decimal _amount;
+        public decimal Amount
+        {
+            get { return _amount; }
+            set { SetPropertyValue(nameof(Amount), ref _amount, value); }
+        }
     }
 }
