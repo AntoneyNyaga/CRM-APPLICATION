@@ -37,9 +37,9 @@ namespace SLAMS_CRM.Module.BusinessObjects
         public string ProductName { get; set; }
         public string ProductSerialNumber { get; set; }
         public string ProductDescription { get; set; }
-        public decimal ProductCategory { get; set; }
-        public decimal ProductPurchsePrice { get; set; }      
-        public decimal ProductSalesPrice { get; set; }
+        public string ProductCategory { get; set; }
+        public string supplier { get; set; }
+        public decimal ProductPurchasePrice { get; set; }
 
     }
 }
