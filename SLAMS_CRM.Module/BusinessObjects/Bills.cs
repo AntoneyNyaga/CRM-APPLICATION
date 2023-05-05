@@ -39,10 +39,6 @@ namespace SLAMS_CRM.Module.BusinessObjects
         //    set { SetPropertyValue(nameof(PersistentProperty), ref _PersistentProperty, value); }
         //}
 
-        //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
-        //public void ActionMethod() {
-        //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
-        //    this.PersistentProperty = "Paid";
-        //}
+ 
     }
 }
