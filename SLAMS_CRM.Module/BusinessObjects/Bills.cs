@@ -31,8 +31,7 @@ namespace SLAMS_CRM.Module.BusinessObjects
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
-        //private string _PersistentProperty;
-        //[XafDisplayName("My display name"), ToolTip("My hint message")]
+
         //[ModelDefault("EditMask", "(000)-00"), Index(0), VisibleInListView(false)]
         //[Persistent("DatabaseColumnName"), RuleRequiredField(DefaultContexts.Save)]
         //public string PersistentProperty {
