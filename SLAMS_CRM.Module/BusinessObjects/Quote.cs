@@ -106,7 +106,7 @@ namespace SLAMS_CRM.Module.BusinessObjects
         }
 
 
-        // the one part of the Association
+
         //[Association("Quote-Products")]
         //public XPCollection<Product> Products { get { return GetCollection<Product>(nameof(Products)); } }
 
