@@ -106,8 +106,8 @@ namespace SLAMS_CRM.Module.BusinessObjects
         }
 
 
-
-        
+    
+        //[Association("Quote-Products")]
         //public XPCollection<Product> Products { get { return GetCollection<Product>(nameof(Products)); } }
 
         private decimal _price;
