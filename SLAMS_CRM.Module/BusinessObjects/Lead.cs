@@ -34,7 +34,7 @@ namespace SLAMS_CRM.Module.BusinessObjects
         {
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
-            // Set ConvertedFrom based on the value of SourceType
+            
             if(SourceType.HasValue)
             {
                 ConvertedFrom = SourceType.Value.ToString();
