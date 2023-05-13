@@ -121,7 +121,6 @@ namespace SLAMS_CRM.Module.BusinessObjects
 
     public enum SourceType
     {
-        ColdCall,
         ExistingCustomer,
         SelfGenerated,
         Employee,

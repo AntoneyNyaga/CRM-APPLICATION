@@ -90,11 +90,6 @@ namespace SLAMS_CRM.Module.BusinessObjects
             set => SetPropertyValue(nameof(ValidUntil), ref validUntil, value);
         }
 
-        /*public ApplicationUser AssignedTo
-        {
-            get => assignedTo;
-            set => SetPropertyValue(nameof(AssignedTo), ref assignedTo, value);
-        }*/
 
         [Association("ApplicationUser-Quote")]
         public XPCollection<ApplicationUser> AssignedUsers
