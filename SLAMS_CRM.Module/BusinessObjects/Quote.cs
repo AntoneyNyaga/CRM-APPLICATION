@@ -100,8 +100,6 @@ namespace SLAMS_CRM.Module.BusinessObjects
             }
         }
 
-
-    
         //[Association("Quote-Products")]
         
 
