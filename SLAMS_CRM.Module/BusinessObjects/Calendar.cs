@@ -80,6 +80,7 @@ namespace SLAMS_CRM.Module.BusinessObjects
         Appointment,
         Meeting,
         Reminder,
+        Pending,
         Other
     }
 }
