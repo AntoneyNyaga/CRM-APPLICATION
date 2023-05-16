@@ -185,7 +185,6 @@ namespace SLAMS_CRM.Module.BusinessObjects
         partner,
         Press,
         Prospect,
-        Reseller,
         Other
     }
 
