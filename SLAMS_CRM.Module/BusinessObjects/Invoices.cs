@@ -20,7 +20,6 @@ namespace SLAMS_CRM.Module.BusinessObjects
     
     public class Invoice : BaseObject
     {
-        // Use CodeRush to create XPO classes and properties with a few keystrokes.
         // https://docs.devexpress.com/CodeRushForRoslyn/118557
         public Invoice(Session session)
             : base(session)
