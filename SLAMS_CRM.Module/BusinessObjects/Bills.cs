@@ -18,27 +18,19 @@ namespace SLAMS_CRM.Module.BusinessObjects
     [NavigationItem("Order Management")]
     [ImageName("MainMenuItem")]
 
-    public class Bills : BaseObject
-    { 
-        // Use CodeRush to create XPO classes and properties with a few keystrokes.
-        // https://docs.devexpress.com/CodeRushForRoslyn/118557
-        public Bills(Session session)
-            : base(session)
+    public class Bill
+    {
+        public string BillNumber { get; set; }
+        public DateTime DueDate { get; set; }
+        public decimal Amount { get; set; }
+        // Add other properties as needed
+
+        public void SaveBill()
         {
+            // Perform the logic to save the bill into the system
+            // This could involve interacting with a database or any other data storage mechanism
+            // Implement the necessary code to persist the bill details
         }
-        public override void AfterConstruction()
-        {
-            base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
-        }
-
-
-        //[Persistent("DatabaseColumnName"), RuleRequiredField(DefaultContexts.Save)]
-        //public string PersistentProperty {
-        //    get { return _PersistentProperty; }
-        //    set { SetPropertyValue(nameof(PersistentProperty), ref _PersistentProperty, value); }
-        //}
-
- 
     }
 }
+
