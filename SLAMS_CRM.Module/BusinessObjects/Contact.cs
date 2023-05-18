@@ -49,7 +49,6 @@ namespace SLAMS_CRM.Module.BusinessObjects
 
 
         //[ExpandObjectMembers(ExpandObjectMembers.Never)]
-        //[DevExpress.Xpo.Aggregated]
         [RuleRequiredField("RuleRequiredField for Contact.Company", DefaultContexts.Save)]
 
         public Company Company { get => company; set => SetPropertyValue(nameof(Company), ref company, value); }
