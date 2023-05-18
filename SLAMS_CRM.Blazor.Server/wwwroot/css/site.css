@@ -12,7 +12,6 @@ app {
     background-color: currentColor;
     -webkit-mask: url('../images/Logo.svg');
     mask: url('../images/Logo.svg');
-    -webkit-mask-position: center;
     mask-position: center;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
