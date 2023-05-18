@@ -38,7 +38,6 @@ namespace SLAMS_CRM.Module.BusinessObjects
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
 
-
         string jobTitle;
         Company company;
         //string leadSource;
@@ -48,7 +47,7 @@ namespace SLAMS_CRM.Module.BusinessObjects
         public string JobTitle { get => jobTitle; set => SetPropertyValue(nameof(JobTitle), ref jobTitle, value); }
 
 
-        //[ExpandObjectMembers(ExpandObjectMembers.Never)]
+       
         [RuleRequiredField("RuleRequiredField for Contact.Company", DefaultContexts.Save)]
 
         public Company Company { get => company; set => SetPropertyValue(nameof(Company), ref company, value); }
