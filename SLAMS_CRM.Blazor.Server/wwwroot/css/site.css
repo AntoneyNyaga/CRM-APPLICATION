@@ -29,3 +29,21 @@ app {
     height: 100%;
     z-index: 100001;
 }
+
+.dxbl-group > .dxbl-group-header > .dxbl-text {
+    color: deeppink;
+    font-weight: bold;
+}
+
+.dxbl-fl .dxbl-fl-item.dxbl-fl-item-horizontal > .dxbl-fl-cpt {
+    font-weight: bold;
+}
+
+.dxbl-fl .dxbl-fl-group > .dxbl-group {
+    box-shadow: 5px 5px 20px cadetblue;
+    border-radius: 0px 15px;
+}
+
+.dxbl-grid {
+    box-shadow: 5px 5px 20px cadetblue;
+}
