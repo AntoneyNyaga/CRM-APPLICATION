@@ -82,5 +82,6 @@ namespace SLAMS_CRM.Module.BusinessObjects
         Reminder,
         Pending,
         Canceled,
+        Other
     }
 }
