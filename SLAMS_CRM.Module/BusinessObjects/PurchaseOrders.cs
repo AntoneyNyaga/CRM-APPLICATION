@@ -38,7 +38,7 @@ namespace SLAMS_CRM.Module.BusinessObjects
         public DateTime PurchaseOrderDate { get; set; } = DateTime.Now;
         public string Item { get; set; }
         public Account Vendor { get; set; }
-        public DateTime DueDate { get; set; } = DateTime.Now.AddDays(30);
+        public DateTime DueDate { get; set; } = DateTime.Now.AddDays(7);
         public string Description { get; set; }
         public decimal Amount { get; set; }
         public decimal TotalAmount { get; set; }     
