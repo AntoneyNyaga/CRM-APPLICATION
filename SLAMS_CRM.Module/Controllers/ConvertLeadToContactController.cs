@@ -74,7 +74,7 @@ public class ConvertLeadToContactController : ObjectViewController<ListView, Lea
             objectSpace.CommitChanges();
         }
 
-        // Refresh the view to show the updated data
+        
         View.ObjectSpace.Refresh();
     }
 }
