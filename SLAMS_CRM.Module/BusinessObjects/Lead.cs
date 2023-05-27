@@ -33,7 +33,7 @@ namespace SLAMS_CRM.Module.BusinessObjects
         public override void AfterConstruction()
         {
             base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+            
             
             if(SourceType.HasValue)
             {
