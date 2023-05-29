@@ -19,7 +19,7 @@ namespace SLAMS_CRM.Module.BusinessObjects
     [ImageName("ChoroplethMap")]
     
     
-    //[Persistent("DatabaseTableName")
+    
     public class Services : BaseObject
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
         // Use CodeRush to create XPO classes and properties with a few keystrokes.
